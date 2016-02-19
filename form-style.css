@@ -1,0 +1,36 @@
+#wrapper{
+	margin:50px auto;
+	width:400px;
+	height:800px;
+	border:1px solid black;
+	padding: 10px;
+}
+h3{
+	text-align: center;
+	font-family: Arial;
+}
+form{
+	text-align: center;
+}
+#second-form{
+	display: none;
+}
+label{
+	box-sizing: border-box;
+}
+
+input[type = 'text'],
+input[type = 'email']{
+	width:220px;
+	border:1px solid #ADB7BA;
+	height:20px;
+}
+input[type = 'submit'],
+input[type = 'reset']{
+	width:150px;
+	margin-left: 30px;
+
+}
+span{
+	color:#F55138;
+}

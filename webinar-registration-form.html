@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8"/>
+	<title>Webinar registration form</title>
+	<link rel="stylesheet" type="text/css" href="form-style.css">
+</head>
+<body>
+<div id = "wrapper">
+	<h3>Регистрация за Уебинар</h3>
+	<form id = "main-form">
+	<label for = "namefname">Име и Фамилия:<span>*</span></label>
+	<br/>
+	<input type = "text" id = "namefname" reqiured = "true"/>
+	<br/>
+	<label for = "address">Адрес:</label>
+	<br/>
+	<input type = "text" id = "address"/>
+	<br/>
+	<label for = "region">Населено място:</label>
+	<br/>
+	<input type = "text" id = "region"/>
+	<br/>
+	<label for = "postcode">Пощенски код:</label>
+	<br/>
+	<input type = "text" id = "postcode"/>
+	<br/>
+	<label for = "email">E-mail:<span>*</span></label>
+	<br/>
+	<input type = "email" id = "email" required = "true"/>
+	<br/>
+	<label for = "tel">Телефон:<span>*</span></label>
+	<br/>
+	<input type = "text" id = "tel" pattern = "[0-9]" required = "true"/>
+	<br/>
+	<label for = "date-seminat">Дата на семинара:<span>*</span></label>
+	<br/>
+	<input type = "text" id = "date-seminar" required = "true" value = "mm/dd/yyyy"/>
+	<br/>
+	<input type = "checkbox" id = "invoice" onchange = "showAnotherData()"/>
+	<label for = "invoice">Желая фактура</label>
+	<br/>
+	</form>
+	<form id = "second-form">
+	<label for = "organization">Фирма/Организация:<span>*</span></label>
+	<br/>
+	<input type = "text" id = "organization" required = "true"/>
+	<br/>
+	<label for = "mol">МОЛ:<span>*</span></label>
+	<br/>
+	<input type = "text" id = "mol" required = "true"/>
+	<br/>
+	<label for = "eik">ЕИК:<span>*</span></label>
+	<br/>
+	<input type = "text" id = "eik" required = "true"/>
+	<br/>
+	<label for = "dds">ИН по ДДС:<span>*</span></label>
+	<br/>
+	<input type = "text" id = "dds" required = "true"/>
+	<br/>
+	<label for = "address2">Адрес:<span>*</span></label>
+	<br/>
+	<input type = "text" id = "address2" required = "true"/>
+	<br/>
+	</form>
+	<input type = "submit" value = "Регистрирай се"/>
+	<input type = "reset" value = "Изчисти"/>
+</div>
+<script type="text/javascript">
+	function showAnotherData(){
+		var selectedCheck = document.getElementById('invoice');
+		var showHideForm = document.getElementById('second-form');
+		if (selectedCheck.checked) {
+			showHideForm.style.display = "block";
+		} else{
+			showHideForm.style.display = "none";
+		}
+	}
+</script>
+</body>
+</html>
